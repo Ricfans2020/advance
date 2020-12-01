@@ -1,0 +1,28 @@
+[package]
+name = "polkadot-statement-distribution"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Statement Distribution Subsystem"
+edition = "2018"
+
+[dependencies]
+futures = "0.3.8"
+tracing = "0.1.22"
+tracing-futures = "0.2.4"
+polkadot-primitives = { path = "../../../primitives" }
+node-primitives = { package = "polkadot-node-primitives", path = "../../primitives" }
+sp-staking = { git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
+polkadot-subsystem = { package = "polkadot-node-subsystem", path = "../../subsystem" }
+polkadot-node-subsystem-util = { path = "../../subsystem-util" }
+polkadot-node-network-protocol = { path = "../../network/protocol" }
+arrayvec = "0.5.2"
+indexmap = "1.6.0"
+
+[dev-dependencies]
+polkadot-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+assert_matches = "1.4.0"
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-application-crypto = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-keystore = { git = "https://github.com/paritytech/substrate", branch = "master" }
